@@ -10,13 +10,13 @@ router.get('/login', (req, res) => {
 
     */
 router.post('/signup', async (req, res) => {
-    const {username,email,password}=req.body;
+    const {username,email,password,collegeName,yearJoined}=req.body;
    let isUser=await User.findOne({email:email});
    if(isUser){
        res.json({error:'UserPresent'});
    }
    else{
-    let user=new User({username:username,email:email,password:password});
+    let user=new User({username,email,password,collegeName,yearJoined});
     try{
      await user.save();}
     catch(e){console.log(e);

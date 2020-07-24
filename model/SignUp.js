@@ -11,6 +11,14 @@ const UserSchema=new Schema({
     password:{
         type:String,
         required:true
+    },
+    collegeName:{
+        type:String,
+        required:true
+    },
+    yearJoined:{
+        type:Number,
+        required:true
     }
 });
 
