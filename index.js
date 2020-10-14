@@ -10,7 +10,7 @@ let loginRoute=require('./controllers/login');
 //support parsing of application/x-www-form-urlencoded post data
 app.use(bodyParser.urlencoded({ extended: true }));
 
-mongoose.connect('mongodb+srv://IosdApp:ZFSVP23Lpa9j77JG@cluster0.m3zbq.mongodb.net/AfCoronaApp?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://IosdApp@cluster0.m3zbq.mongodb.net/AfCoronaApp?retryWrites=true&w=majority',
 { useNewUrlParser: true, useUnifiedTopology: true },
 ()=>console.log("Connected to DB"));
 
